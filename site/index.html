@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KGCP Print Works: tees, hoodies, stickers and more</title>
+<meta name="description" content="Tees, hoodies, stickers, bottles and shorts, printed when you order. Browse the designs and check out on Etsy.">
+<meta property="og:title" content="KGCP Print Works">
+<meta property="og:description" content="Fresh designs on tees, hoodies, stickers, bottles and shorts. Printed when you order.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2718%27 cy=%2718%27 r=%2712%27 fill=%27%23FF4F9A%27/%3E%3Ccircle cx=%2714%27 cy=%2714%27 r=%2712%27 fill=%27%231A1B4B%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#">KGCP Print Works</a>
+  <nav>
+    <a href="#shop">Designs</a>
+    <a href="#play">Play</a>
+    <a class="btn small" data-shop-link href="https://kgcpprintworks.etsy.com/">Visit the Etsy shop</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Fresh off the press.</h1>
+      <p>Tees, hoodies, stickers, bottles and shorts, printed when you order. Pick a design here, then choose your size and check out on Etsy.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#shop">Browse designs</a>
+        <a class="link" data-shop-link href="https://kgcpprintworks.etsy.com/">Visit the Etsy shop</a>
+      </div>
+    </div>
+    <div class="hero-stack" id="hero-stack" aria-label="Most loved designs"></div>
+  </section>
+
+  <ul class="promises" id="promises"></ul>
+
+  <section id="shop" class="shop">
+    <div class="shop-head">
+      <h2>Designs</h2>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Search designs" aria-label="Search designs">
+        <select id="sort" aria-label="Sort designs">
+          <option value="loved">Most loved</option>
+          <option value="new">Newest</option>
+          <option value="low">Price, low to high</option>
+          <option value="high">Price, high to low</option>
+        </select>
+      </div>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by product type"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="fallback" id="fallback" hidden>
+      <h3>The catalog is being refreshed.</h3>
+      <p>Every design is still available in the Etsy shop.</p>
+      <a class="btn" data-shop-link href="https://kgcpprintworks.etsy.com/">Visit the Etsy shop</a>
+    </div>
+  </section>
+
+  <section id="play" class="play">
+    <div class="game" id="game">
+      <div class="game-head">
+        <div>
+          <h2>Match the designs</h2>
+          <p>Flip two cards at a time and find all six pairs.</p>
+        </div>
+        <p class="moves" aria-live="polite"><span id="moves">0</span> moves</p>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="win" id="win" hidden>
+        <h3 id="win-title"></h3>
+        <p id="win-promo" hidden></p>
+        <div class="win-picks" id="win-picks"></div>
+        <button class="btn" id="again" type="button">Play again</button>
+      </div>
+    </div>
+
+    <aside class="side">
+      <form class="poll" id="poll" hidden>
+        <h2 id="poll-q"></h2>
+        <div id="poll-options"></div>
+        <button class="btn" type="submit">Send my vote</button>
+      </form>
+      <div class="insta" id="insta" hidden>
+        <h2>New designs land on Instagram first.</h2>
+        <a class="btn" id="insta-link" rel="noopener">Follow on Instagram</a>
+      </div>
+      <div class="ad" id="ad" hidden><span>Advertisement</span></div>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <p><strong>KGCP Print Works</strong> sells through Etsy. Prices and availability are confirmed at checkout there. <span id="updated"></span></p>
+  <p class="legal">The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
+  <p class="legal"><a href="privacy.html">Privacy and terms</a></p>
+</footer>
+
+<dialog id="quick" aria-labelledby="q-title">
+  <button class="close" id="q-close" type="button" aria-label="Close">&times;</button>
+  <div class="q-gallery">
+    <img id="q-main" alt="">
+    <div class="q-thumbs" id="q-thumbs"></div>
+  </div>
+  <div class="q-info">
+    <h2 id="q-title"></h2>
+    <p class="q-price" id="q-price"></p>
+    <p class="q-favs" id="q-favs"></p>
+    <a class="btn wide" id="q-buy" rel="noopener">Buy on Etsy</a>
+    <p class="q-note">Sizes, colors and checkout are on Etsy.</p>
+    <p class="q-desc" id="q-desc"></p>
+    <a class="link" id="q-more" rel="noopener">Read full details on Etsy</a>
+  </div>
+</dialog>
+</body>
+</html>
