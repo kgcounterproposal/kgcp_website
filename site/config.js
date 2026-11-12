@@ -7,7 +7,7 @@ export default {
   // Short facts shown under the hero. Only list things that are true for every listing.
   promises: ['Secure checkout on Etsy', 'Free shipping in the contiguous US', 'Printed when you order'],
 
-  instagram: '', // handle without @, e.g. 'kgcpprintworks'
+  instagram: 'kgcpprintworks', // handle without @, e.g. 'kgcpprintworks'
 
   // Shown when someone wins the matching game. Create the code in Etsy first
   // (Shop Manager > Marketing > Sales and discounts), then paste it here.
